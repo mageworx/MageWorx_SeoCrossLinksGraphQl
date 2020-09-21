@@ -9,13 +9,13 @@
 
     <!-- Add use_in_crosslinking attribute to entities if needed -->
     <type name="Magento\CatalogGraphQl\Model\Resolver\Products\DataProvider\Product\CollectionProcessorInterface">
-        <plugin name="mageworx_seocrosslinks_gql_add_attribute_to_category_collection"
+        <plugin name="mageworx_seocrosslinks_gql_add_attribute_to_product_collection"
                 type="MageWorx\SeoCrossLinksGraphQl\Plugin\AddCrosslinksAttributeToProductCollectionPlugin"
                 sortOrder="1"
         />
     </type>
     <type name="Magento\CatalogGraphQl\Model\AttributesJoiner">
-        <plugin name="mageworx_seocrosslinks_gql_add_attribute_to_product_collection"
+        <plugin name="mageworx_seocrosslinks_gql_add_attribute_to_category_collection"
                 type="MageWorx\SeoCrossLinksGraphQl\Plugin\AddCrosslinksAttributeToCategoryCollectionPlugin"
                 sortOrder="1"
         />
@@ -23,10 +23,10 @@
 
     <!-- Add crosslinks to entities' content -->
     <type name="Magento\CatalogGraphQl\Model\Resolver\Product\ProductComplexTextAttribute">
-        <plugin name="mageworx_seocrosslinks_gql_modify_product_data" type="MageWorx\SeoCrossLinksGraphQl\Plugin\AddCrosslinksToProductPlugin" sortOrder="1" />
+        <plugin name="mageworx_seocrosslinks_gql_modify_product_data" type="MageWorx\SeoCrossLinksGraphQl\Plugin\AddCrosslinksToProductPlugin" sortOrder="1"/>
     </type>
     <type name="Magento\CatalogGraphQl\Model\Resolver\Category\CategoryHtmlAttribute">
-        <plugin name="mageworx_seocrosslinks_gql_modify_category_data" type="MageWorx\SeoCrossLinksGraphQl\Plugin\AddCrosslinksToCategoryPlugin" sortOrder="1" />
+        <plugin name="mageworx_seocrosslinks_gql_modify_category_data" type="MageWorx\SeoCrossLinksGraphQl\Plugin\AddCrosslinksToCategoryPlugin" sortOrder="1"/>
     </type>
 
 </config>
